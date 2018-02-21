@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: aqua;
+  line-height: 1.5;
+}
+
+H1 {
+  font-size: 38px;
+}
+
+H2 {
+  font-size: 32px;
+}
+
+.ingredients-list {
+  list-style: square;
+}
+
+ol {
+  list-style: georgian;
+}
+
+header > img {
+  width: 100px;
+}
+
+ul  li  a {
+  text-decoration: none;
+  color: inherit;
+}
