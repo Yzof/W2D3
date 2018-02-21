@@ -61,11 +61,20 @@ RSpec.describe "#my_transpose" do
 end
 
 RSpec.describe "#stock_picker" do
-  it "returns nil when passed empty array of stocks" 
+  it "returns nil when passed empty array of stocks" do
+    expect(stock_picker([])).to eq(nil)
+  end
 
-  it "returns nil when there are no profitable days"
+  it "returns nil when there are no profitable days" do
+    expect(stock_picker([*30..1])).to eq(nil)
+  end
 
-  it "Does not shortsell stocks"
+  it "Does not shortsell stocks" do
+    expect(stock_picker([31, 15, 1, 5])).to eq([2, 3])
+  end
 
-  it "Properly picks correct buy and sell days"
+
+  it "Properly picks correct buy and sell days" do
+    expect(stock_picker([1, 12, 15, 4, 7])).to eq([0, 2])
+  end
 end

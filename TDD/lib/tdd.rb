@@ -39,3 +39,20 @@ class Array
     output
   end
 end
+
+def stock_picker(prices)
+
+  best_stocks = nil
+  stock_diff = 0
+
+  prices.each_with_index do |price1, day1|
+    prices[day1..-1].each_with_index do |price2, day2|
+      if price2 - price1 > stock_diff
+        best_stocks = [day1, day2 + day1]
+        stock_diff = price2 - price1
+      end
+    end
+  end
+
+  best_stocks
+end
