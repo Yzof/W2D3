@@ -38,4 +38,34 @@ RSpec.describe "#two_sum" do
   end
 end
 
-#expect().to eq([])
+RSpec.describe "#my_transpose" do
+
+  it "returns empty nested array if given empty nested array" do
+    arr = [[]]
+    expect(arr.my_transpose).to eq(arr)
+  end
+
+  it "properly transposes small array" do
+    arr = [[1, 2], [3, 4]]
+    expect(arr.my_transpose).to eq(arr.transpose)
+  end
+
+  it "properly transposes medium array" do
+    arr = [[1, 2, 3, 4],
+           [5, 6, 7, 8],
+           [9, 10, 11, 12],
+           [13, 14, 15, 16]]
+    expect(arr.my_transpose).to eq(arr.transpose)
+  end
+
+end
+
+RSpec.describe "#stock_picker" do
+  it "returns nil when passed empty array of stocks" 
+
+  it "returns nil when there are no profitable days"
+
+  it "Does not shortsell stocks"
+
+  it "Properly picks correct buy and sell days"
+end

@@ -11,7 +11,7 @@ class Array
     output = []
 
     each_index do |idx|
-      next if idx == length 
+      next if idx == length
       idx2 = idx + 1
 
       while idx2 < length
@@ -21,6 +21,21 @@ class Array
         idx2 += 1
       end
     end
+    output
+  end
+
+  def my_transpose
+
+    output = Array.new(length) { [] }
+
+    each_index do |idx|
+      row = self[idx]
+      row.each_index do |jdx|
+        el = row[jdx]
+        output[jdx] << el
+      end
+    end
+
     output
   end
 end
