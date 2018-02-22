@@ -30,9 +30,9 @@ RSpec.describe Card do
     it "should overide default inspect" do
       expect(card.inspect).to eq("3H")
     end
-
     it "calls #to_s" do
-
+      expect(card).to receive(:to_s)
+      card.inspect
     end
 
 
